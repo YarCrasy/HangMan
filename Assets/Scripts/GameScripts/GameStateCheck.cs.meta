@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: da92241a8584b47419e9a94771fe5633
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dummyFaceNormal: {fileID: 21300000, guid: 7144277097646314a9bb2cf1ed07bd4f, type: 3}
+  - dummyFaceDead: {fileID: 21300000, guid: d739278d80efdf74395d33ba5a089b2a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
