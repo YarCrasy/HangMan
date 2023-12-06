@@ -1,10 +1,11 @@
-using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class WordsPool : MonoBehaviour
 {
+    private static readonly string[] defaultWords = { "Hello World", "Word", "Quaternion", "Canvas", "Hang", "Script", "Programming", "Game Object", "Prefabs", "Text", "Animator", "Animation", "Layer", "Tag", "Inspector", "Project", "Console", "ProBuilder", "Some word that in fact is a sentence" };
     public static string[] words = new string[100];
 
     static string actualWord;
@@ -16,6 +17,15 @@ public class WordsPool : MonoBehaviour
     private void Awake()
     {
         words = System.IO.File.ReadAllLines("Words.hmwords");
+        
+        if (words[0] == null)
+        {
+            for(int i = 0; i < defaultWords.Length; i++)
+            {
+                words[i] = defaultWords[i];
+            }
+        }
+
         for (int i = 0; i < words.Length; i++)
         {
             words[i] = words[i].ToUpper();
